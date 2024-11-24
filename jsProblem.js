@@ -26,6 +26,8 @@ function sendNotification(email) {
 }
 
 
+
+
 // problem 03  pari nai
 function checkDigitsInName(name) {
     if (typeof name !== "string") {
@@ -55,6 +57,9 @@ function checkDigitsInName(name) {
 
 
 
+
+
+
 // problem 04
 function calculateFinalScore(obj) {
     if (typeof obj !== 'object' || Array.isArray(obj)) {
@@ -72,3 +77,27 @@ function calculateFinalScore(obj) {
 
 }
 
+
+
+// problem 05
+function  waitingTime(waitingTimes  , serialNumber) {
+    if (!Array.isArray(waitingTimes) || typeof serialNumber !== 'number'){
+        return "Invalid Input ";
+    }
+
+        let sum = 0;
+    for (let i = 0; i < waitingTimes.length; i++){
+        const singleTime = waitingTimes[i];
+        sum += singleTime;
+    }
+
+    const avg = sum / waitingTimes.length;
+    const roundAvg = Math.round(avg);
+
+    const originalSerial = serialNumber -1;
+
+    const nextSerial = originalSerial - waitingTimes.length;
+
+    const totalWaitingTime = roundAvg * nextSerial;
+    return totalWaitingTime;
+}
