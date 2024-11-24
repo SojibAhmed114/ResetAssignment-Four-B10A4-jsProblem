@@ -34,27 +34,16 @@ function checkDigitsInName(name) {
         return "Invalid Input";
     }
     
-    let demo = 0;
-    for (const yours of name){
-        if (typeof yours === 'string'){
-            demo.push(yours);
-            
+    for (const latter of name){
+        console.log(latter);
+        if (!isNaN(latter) && latter !== ""){
+            return true;
         }
-        return false;
     }
 
-    return demo;
+    return false;
     
 }
-// let sdf = checkDigitsInName(Raj123)
-// console.log(sdf);
-// console.log(checkDigitsInName("n9ayeem"));
-// console.log(checkDigitsInName('e1mu3'));
-// console.log(checkDigitsInName("Suman"));
-// console.log(checkDigitsInName("Name2024"));
-// console.log(checkDigitsInName("!@#"));
-// console.log(checkDigitsInName(["Raj"]));
-
 
 
 
